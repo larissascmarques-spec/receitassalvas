@@ -192,7 +192,7 @@ function updateMobilePurchase() {
 window.addEventListener("scroll", updateMobilePurchase, {passive: true});
 window.addEventListener("resize", updateMobilePurchase);
 updateMobilePurchase();
-const checkoutUrl = "";
+const checkoutUrl = "https://pay.hotmart.com/P108680268W?checkoutMode=10";
 document.querySelector("#comprar").addEventListener("click", () => {
   if (checkoutUrl) {
     window.location.assign(checkoutUrl);
