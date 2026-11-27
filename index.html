@@ -5,9 +5,397 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dos Salvos para a Mesa | 200 receitas personalizadas</title>
 <meta name="description" content="Um livro digital com 200 receitas, feito a partir dos seus Salvos do Instagram e do que você gosta de cozinhar.">
-<link rel="preload" as="image" imagesrcset="mockup-campanha-560.webp 560w, mockup-campanha-760.webp 760w, mockup-campanha.webp 1320w" imagesizes="(max-width: 552px) calc(100vw - 32px), (max-width: 750px) 520px, (max-width: 1228px) 52vw, 620px" fetchpriority="high">
-<link rel="preload" href="livro-titulos.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="estilo.css">
+<link rel="preload" as="image" imagesrcset="abertura-480.webp 480w, abertura-680.webp 680w, mockup-campanha-760.webp 760w, mockup-campanha.webp 1320w" imagesizes="(max-width: 552px) calc(100vw - 32px), (max-width: 750px) 520px, (max-width: 1228px) 52vw, 620px" fetchpriority="high">
+<style>
+@font-face{font-family:Livro;src:url("livro-latino.woff2") format("woff2");font-display:swap;unicode-range:U+0020-017F,U+2000-206F,U+20AC,U+2190-2199,U+2713}
+:root{--ink:#26342a;--leaf:#243a2c;--muted:#4f5b50;--ivory:#fcfaf4;--paper:#f2eee2;--line:#dcdacf;--accent:#a6ac77;--display:Livro,"Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--ivory);font:1rem/1.62 system-ui,sans-serif}h1,h2,h3,p,figure{margin:0 0 1rem}h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.045em;line-height:1.04}h1{font-size:clamp(2.8rem,5.1vw,5.05rem);max-width:12ch}h2{font-size:clamp(2.25rem,4.1vw,3.85rem);max-width:17ch}h3{font-size:1.55rem}p{color:var(--muted)}img,video{display:block;width:100%;height:auto}a{color:inherit}.container{width:min(1180px,calc(100% - 3rem));margin-inline:auto}.cabecalho{border-bottom:1px solid var(--line)}.topo{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.05rem}.marca{font:1.25rem/1.2 var(--display);letter-spacing:-.035em}.topo a{font-size:.88rem;text-underline-offset:.25em}.abertura{padding-block:clamp(2.25rem,5.7vw,5.2rem);background:var(--paper)}.grade-abertura,.duas-colunas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,6vw,6rem)}.grade-abertura{grid-template-columns:minmax(0,.86fr) minmax(0,1.16fr);gap:clamp(1.25rem,4vw,4.4rem)}.chamada em{font-style:normal;color:#52613d}.chamada p{max-width:36rem;font-size:1.08rem;margin-bottom:1.45rem}.botao{display:inline-block;border:1px solid transparent;border-radius:4px;background:var(--leaf);color:white;padding:.95rem 1.35rem;text-decoration:none;font:700 1rem/1.4 system-ui;cursor:pointer;text-align:center}.botao:hover{background:#3b533e}:focus-visible{outline:3px solid #6e7742;outline-offset:4px}
+.produto{margin:0}.produto img,.oferta img{aspect-ratio:1.5;object-fit:cover;border-radius:4px;background:#e5dfd0}.produto figcaption{font-size:.78rem;color:var(--muted);margin-top:.5rem}.secao{padding-block:clamp(3.2rem,7vw,6rem)}.texto p{max-width:47ch}.texto p:last-child,.passos p:last-child{margin-bottom:0}.papel{background:var(--paper)}.filme{margin:0;overflow:hidden;border-radius:4px;background:#302b24}.filme video{aspect-ratio:1.16;object-fit:cover}.filme-maior video{aspect-ratio:1.52;object-position:center 60%}.amostras{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}.amostras video{aspect-ratio:.94}.passos{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,4vw,3rem);padding:0;margin:1.8rem 0 0;counter-reset:passo}.passos li{border-top:1px solid var(--accent);padding-top:.9rem;counter-increment:passo}.passos li::before{content:counter(passo);display:block;margin-bottom:.65rem;color:#58623d;font-weight:700}.oferta{background:var(--leaf);color:var(--ivory)}.oferta p{color:#e8eadf}.oferta h2{max-width:none}.oferta .preco{font:clamp(3.5rem,6vw,5.7rem)/.98 var(--display);color:white;margin:1.2rem 0 .45rem}.pagamento{font-size:.88rem}.oferta .botao{background:var(--ivory);color:var(--leaf)}.oferta .botao:hover{background:#e8e5d5}.faq{max-width:800px}.faq h2{max-width:none}details{border-bottom:1px solid var(--line);padding:.95rem 0}summary{cursor:pointer;font-weight:700}details p{margin:.55rem 0 0}footer{border-top:1px solid var(--line);padding:1.5rem 0}footer p{font-size:.87rem;margin:.55rem 0 0}dialog{max-width:min(430px,calc(100% - 32px));padding:1.5rem;background:var(--ivory);color:var(--ink);border:1px solid var(--line);border-radius:5px}dialog::backdrop{background:#161e17b0}
+@media(max-width:750px){.container{width:calc(100% - 2rem)}.grade-abertura,.duas-colunas,.passos{grid-template-columns:1fr}.grade-abertura,.duas-colunas{gap:1.45rem}.abertura{padding-top:1.7rem}.chamada p{font-size:1rem}.chamada .botao,.oferta .botao{width:100%;max-width:28rem}.por-dentro .texto{grid-row:1}.passos{gap:1rem}.oferta .duas-colunas{gap:1.7rem}}
+
+/* O mockup recortado faz parte da composição, sem moldura de fotografia. */
+.produto img,.oferta img{background:transparent;border-radius:0;object-fit:contain}
+.grade-abertura{grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:clamp(1rem,3vw,3rem)}
+.chamada h1{max-width:13ch;font-size:clamp(2.65rem,4.7vw,4.95rem)}
+.produto figcaption{text-align:right}
+@media(max-width:750px){
+  .grade-abertura{grid-template-columns:1fr}
+  .produto figcaption{text-align:left}
+}
+
+.produto{position:relative;padding-left:10%;padding-bottom:4%}
+.produto img.salvos-celular{position:absolute;left:0;bottom:12%;width:25%;aspect-ratio:auto;border:4px solid #172019;border-radius:12px;box-shadow:0 8px 20px #15281940}
+.exemplos{background:#f2eee2}
+.exemplos h2{max-width:22ch}
+.exemplos>.container>p{max-width:65ch}
+.duas-receitas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,3vw,2rem);margin:2rem 0 1rem}
+.transformacao{min-width:0;background:#fcfaf4;padding:clamp(.85rem,2vw,1.4rem);border:1px solid var(--line)}
+.comparacao{display:grid;grid-template-columns:.85fr 1.15fr;gap:.75rem;align-items:start}
+.post,.ficha-demo{min-width:0;margin:0}
+.post img{aspect-ratio:.82;object-fit:cover;border-radius:4px}
+.post figcaption,.nota-exemplo{font-size:.86rem;margin-top:.5rem}
+.ficha-demo{background:#fff;border:1px solid var(--line);padding:.65rem}
+.ficha-demo img{aspect-ratio:1.55;object-fit:cover}
+.ficha-demo h4{font:1.18rem/1.1 var(--display);margin:.55rem 0}
+.ficha-demo ul{margin:0;padding-left:1rem;font-size:.85rem}
+.ficha-demo .rotulo{margin:0 0 .45rem;font-size:.85rem;font-weight:700}
+@media(max-width:800px){.duas-receitas{grid-template-columns:1fr}}
+
+.duas-receitas{gap:clamp(1.6rem,4vw,3.2rem);margin-top:clamp(1.65rem,4vw,3rem)}
+.transformacao{display:grid;grid-template-columns:minmax(0,.66fr) minmax(0,1fr);align-items:center;gap:clamp(.7rem,2vw,1.35rem);padding:0;border:0;background:transparent}
+.transformacao .post{align-self:center}
+.transformacao .post img{aspect-ratio:.72;object-fit:cover;border:4px solid #202920;border-radius:13px;box-shadow:0 8px 16px #243a2c26}
+.transformacao .post figcaption{text-align:center;color:var(--muted)}
+.folha-receita{min-width:0;margin:0;background:var(--ivory);border:1px solid #dfd8c7;border-radius:3px;overflow:hidden;box-shadow:0 10px 24px #243a2c20,4px 4px 0 #e8e1cf}
+.folha-receita>img{aspect-ratio:1.45;object-fit:cover;object-position:50% 55%}
+.folha-texto{padding:clamp(.75rem,1.8vw,1.35rem)}
+.folha-texto figcaption{font-size:.77rem;font-weight:700;color:var(--muted);margin-bottom:.35rem}
+.folha-texto h3{font-size:clamp(1.45rem,2.7vw,2.25rem);margin-bottom:.75rem;line-height:1.04}
+.folha-texto dl,.folha-texto dd{margin:0}
+.folha-texto dl div{border-top:1px solid var(--line);padding:.45rem 0}
+.folha-texto dt{font-weight:750;font-size:.82rem}
+.folha-texto dd{font-size:.84rem;color:var(--muted);line-height:1.35}
+@media(max-width:420px){.transformacao{grid-template-columns:minmax(0,.61fr) minmax(0,1fr)}}
+
+.transformacao{align-items:start}
+.transformacao .post{align-self:start}
+.transformacao .post img{aspect-ratio:auto;object-fit:contain;border:0;border-radius:4px}
+.folha-texto dd{font-size:.9rem;line-height:1.45}
+.galeria-salvos{background:var(--ivory)}
+.grade-salvos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.85rem,2.4vw,1.8rem);margin-top:1.75rem}
+.grade-salvos figure{margin:0}
+.grade-salvos img{aspect-ratio:9/19;object-fit:contain;background:#141414;border-radius:5px}
+.grade-salvos figcaption{margin-top:.55rem;font-weight:650;font-size:.92rem}
+.reels-volume{display:flex;position:absolute;width:32%;right:1%;bottom:13%;gap:0;pointer-events:none}
+.produto .reels-volume img{width:43%;height:auto;aspect-ratio:9/17;object-fit:cover;border:2px solid #fcfaf4;border-radius:4px;box-shadow:0 3px 9px #18261b50}
+.produto .reels-volume img+img{margin-left:-13%}
+.reels-volume img:first-child{transform:rotate(-9deg)}
+.reels-volume img:last-child{transform:rotate(9deg)}
+@media(max-width:650px){.grade-salvos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.produto.produto-transformacao{padding:0}
+.fluxo-visual{display:grid;grid-template-columns:minmax(0,.72fr) auto minmax(0,1.23fr);align-items:center;gap:clamp(.35rem,1.3vw,1rem)}
+.fluxo-etapa{color:var(--leaf);font-weight:780;font-size:clamp(.85rem,1.4vw,1rem);margin-bottom:.55rem}
+.produto-transformacao .fluxo-origem img{aspect-ratio:auto;border-radius:7px;box-shadow:0 10px 22px #243a2c21}
+.fluxo-seta{color:#52613d;font-size:clamp(1.4rem,3.2vw,2.65rem);line-height:1}
+.fluxo-pagina{overflow:hidden;background:var(--ivory);border:1px solid var(--line);border-radius:4px;box-shadow:0 14px 26px #243a2c23,4px 5px 0 #e5deca}
+.fluxo-pagina .fluxo-marca{background:var(--leaf);color:var(--ivory);font:clamp(.83rem,1.35vw,1.05rem)/1.15 var(--display);margin:0;padding:.55rem .7rem}
+.produto-transformacao .fluxo-pagina img{object-fit:cover;aspect-ratio:1.5;object-position:center 55%}
+.fluxo-texto{padding:clamp(.55rem,1.2vw,1rem)}
+.fluxo-texto h2{font-size:clamp(1.3rem,2.5vw,2.2rem);margin-bottom:.45rem}
+.fluxo-texto p{font-size:clamp(.77rem,1.04vw,.91rem);line-height:1.4;margin-bottom:.45rem}
+.fluxo-texto p:last-child{margin:0}
+.fluxo-texto .fluxo-porcoes{color:var(--leaf);font-weight:750;border-bottom:1px solid var(--line);padding-bottom:.4rem}
+.produto-transformacao figcaption{margin-top:.8rem;text-align:left}
+
+.produto.mockup-acervo{display:grid;grid-template-columns:minmax(0,.64fr) auto minmax(0,1.7fr);align-items:center;gap:clamp(.35rem,1.1vw,.85rem);padding:0;margin:0}
+.mockup-origem,.mockup-destino{min-width:0}
+.mockup-legenda{display:block;font-size:.81rem;font-weight:760;margin-bottom:.45rem;color:var(--leaf)}
+.produto .mockup-origem img{aspect-ratio:auto;object-fit:contain;border:4px solid #172019;border-radius:12px;box-shadow:0 10px 19px #243a2c35}
+.mockup-seta{font-size:clamp(1rem,2vw,1.75rem);color:var(--leaf)}
+.mockup-destino{padding-bottom:5px}
+.mockup-capa{width:79%;margin:0 0 -9px auto;padding:.7rem .85rem 1.25rem;background:var(--leaf);color:var(--ivory);transform:rotate(3deg);border-radius:4px;box-shadow:3px 5px 0 #d7d1bd,5px 7px 0 #a8a78b}
+.mockup-capa span{display:block;font:clamp(1.2rem,2.4vw,2.2rem)/.99 var(--display);letter-spacing:-.035em}
+.mockup-capa small{font-size:.72rem}
+.mockup-livro{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--ivory);border:1px solid #ded8c4;border-radius:4px;overflow:hidden;box-shadow:0 3px 0 #e7dfc9,0 6px 0 #c8c0a7,0 16px 26px #243a2c38;transform:rotate(-2deg)}
+.mockup-folha{min-width:0}
+.mockup-folha+.mockup-folha{border-left:1px solid #d2c9b3;box-shadow:inset 5px 0 6px -6px #524b3c}
+.produto .mockup-folha img{aspect-ratio:1.08;object-fit:cover;object-position:50% 53%;border-radius:0}
+.mockup-folha>div{padding:clamp(.35rem,.8vw,.65rem)}
+.mockup-folha h2{font-size:clamp(.86rem,1.3vw,1.4rem);margin:0 0 .3rem}
+.mockup-folha p{font-size:clamp(.62rem,.9vw,.81rem);line-height:1.3;margin:0 0 .42rem;color:var(--ink)}
+@media(max-width:460px){.produto.mockup-acervo{grid-template-columns:minmax(0,.55fr) auto minmax(0,1.6fr)}}
+
+.produto.campanha{padding:0;min-width:0}
+.produto.campanha img{aspect-ratio:auto;background:transparent;object-fit:contain}
+.destaques-salvos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.35rem,1vw,.85rem);align-items:start}
+.destaques-salvos figure{margin:0;min-width:0}
+.destaques-salvos figure:nth-child(2){margin-top:1.25rem}
+.destaques-salvos img{display:block;width:100%;border-radius:6px;box-shadow:0 7px 15px #243a2c25}
+.destaques-salvos figcaption{margin-top:.45rem;font-size:.83rem;line-height:1.25;font-weight:700}
+.galeria-salvos .amostras{max-width:680px;margin:2rem auto 0}
+
+.demo-receita{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.demo-botoes{display:flex;gap:.35rem;padding:.65rem;background:#eae5d7}
+.demo-botoes button{flex:1;background:transparent;color:var(--leaf);border:0;border-radius:5px;padding:.65rem .4rem;font:700 .92rem/1.2 system-ui;cursor:pointer}
+.demo-botoes button[aria-pressed="true"]{background:var(--leaf);color:white}
+.demo-painel{min-height:420px;display:grid;place-items:center}
+#demo-salvo{padding:.75rem}
+#demo-salvo img{width:auto;max-width:100%;height:min(400px,90vw);border-radius:6px}
+#demo-livro{width:100%;background:var(--ivory)}
+.demo-foto{aspect-ratio:2.5;position:relative;overflow:hidden}
+.demo-foto img{position:absolute;width:110%;max-width:none;top:0;left:0;transform:translateY(-25%)}
+.demo-ficha{padding:1rem 1.2rem}
+.demo-ficha h3{font-size:clamp(1.65rem,3vw,2.5rem);margin-bottom:.45rem}
+.demo-ficha p{font-size:.92rem;line-height:1.45;margin-bottom:.55rem}
+.demo-ficha p:last-child{margin:0}
+.demo-ficha .demo-rotulo{font-size:.78rem;font-weight:750}
+.passos img{aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:0 0 .85rem}
+.passos-nota{font-size:.86rem;margin-top:1rem}
+@media(max-width:430px){.demo-painel{min-height:0}}
+
+.demo-foto{aspect-ratio:auto;background:#eae5d7}
+.demo-foto img{position:static;width:auto;height:auto;max-width:100%;max-height:390px;object-fit:contain;transform:none;margin-inline:auto}
+.demo-ficha h4{margin:.85rem 0 .3rem;font-size:.94rem}
+.demo-ficha ul,.demo-ficha ol{margin:.3rem 0 .65rem;padding-left:1.2rem;font-size:.89rem;line-height:1.48}
+.demo-ficha li+li{margin-top:.3rem}
+
+.livro-amostra{width:min(100%,360px);margin-inline:auto;background:var(--ivory);border:1px solid var(--line);border-radius:5px;box-shadow:4px 5px 0 #e6dfca,0 10px 26px #243a2c19;overflow:hidden}
+.livro-paginas{display:grid}
+.livro-ficha{grid-area:1/1;margin:0}
+.livro-ficha[hidden]{display:block;visibility:hidden;pointer-events:none}
+.livro-ficha img{width:100%;height:auto;aspect-ratio:1.38;object-fit:contain;background:#eeebdf}
+.livro-ficha-texto{padding:.8rem 1rem .7rem}
+.livro-ficha h3{font-size:clamp(1.55rem,3vw,2.08rem);margin:0 0 .35rem}
+.livro-ficha p{font-size:.85rem;line-height:1.38;margin-bottom:.45rem}
+.livro-ficha strong{display:block;color:var(--ink)}
+.livro-ficha .livro-rende{font-weight:650;border-bottom:1px solid var(--line);padding-bottom:.45rem}
+.livro-controles{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.4rem .85rem;color:var(--muted);font-size:.77rem}
+.livro-controles button{color:var(--leaf);background:transparent;border:0;padding:.35rem;cursor:pointer;text-decoration:underline;font:inherit}
+.livro-ficha .livro-origem{margin:0;padding:.47rem .85rem;color:var(--ivory);background:var(--leaf);font-size:.76rem;font-weight:750}
+.livro-post{text-align:center}
+.livro-post img{aspect-ratio:auto;width:auto;height:auto;max-width:100%;max-height:min(360px,95vw);object-fit:contain;margin:.6rem auto;border-radius:4px}
+.livro-post h3{margin:.45rem .6rem .7rem;font-size:1.4rem}
+.livro-amostra{width:min(100%,390px);border-radius:3px}
+.livro-titulo{text-align:center;padding:.75rem .8rem .55rem}
+.livro-titulo h3{color:var(--leaf);margin:0 0 .3rem}
+.livro-titulo .livro-rende{border:0;padding:0;margin:0}
+.livro-ficha>img{width:calc(100% - 1.25rem);margin-inline:auto;aspect-ratio:1.38;object-fit:cover}
+.livro-ficha-texto{display:grid;grid-template-columns:.88fr 1.12fr;gap:.65rem;padding:.6rem .75rem .75rem}
+.livro-ficha-texto p+p{border-left:1px solid var(--line);padding-left:.65rem}
+.livro-ficha-texto strong{font:700 1rem/1.2 var(--display);color:var(--leaf);margin-bottom:.25rem}
+
+.livro-preparo{border-left:1px solid var(--line);padding-left:.65rem;font-size:.85rem;line-height:1.38}
+.livro-preparo ol{margin:0;padding-left:1.1rem}
+.livro-preparo li+li{margin-top:.22rem}
+
+.livro-faixa{width:100%;max-width:none;margin:clamp(1.3rem,4vw,2.6rem) 0 0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.livro-janela{overflow-x:auto;padding-block:.5rem .85rem}
+.livro-animada .livro-janela{overflow:hidden}
+.livro-trilho,.livro-grupo{display:flex;width:max-content;align-items:stretch}
+.livro-grupo{padding-right:1.35rem;gap:1.35rem}
+.livro-animada .livro-trilho{animation:faixa-receitas 170s linear infinite}
+.livro-animada.livro-parada .livro-trilho{animation-play-state:paused}
+@keyframes faixa-receitas{to{transform:translateX(-50%)}}
+.livro-par{width:clamp(320px,50vw,470px);display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:.6rem;padding:.65rem;background:var(--paper);border:1px solid var(--line);border-radius:6px;align-items:stretch}
+.livro-par .livro-ficha{grid-area:auto;min-width:0}
+.livro-par .livro-antes{display:grid;align-content:center}
+.livro-par .livro-post img{width:100%;max-height:300px;height:auto;aspect-ratio:auto;object-fit:contain;margin:0}
+.livro-par .livro-post h3{display:none}
+.livro-par .livro-ficha:not(.livro-antes){border:1px solid var(--line);background:var(--ivory)}
+.livro-par .livro-ficha>img{width:calc(100% - .75rem);height:clamp(94px,15vw,142px);aspect-ratio:auto;object-fit:contain;background:var(--paper)}
+.livro-par .livro-titulo{padding:.45rem .45rem .35rem}
+.livro-par .livro-titulo h3{font-size:clamp(1.18rem,2vw,1.65rem)}
+.livro-par .livro-ficha-texto{padding:.5rem .5rem .6rem;gap:.45rem}
+.livro-par .livro-ficha-texto p,.livro-par .livro-preparo{font-size:.76rem;line-height:1.34}
+.livro-par .livro-preparo{padding-left:.45rem}
+.livro-par .livro-ficha-texto strong{font-size:.91rem}
+.livro-faixa .livro-controles{border-top:0}
+@media(prefers-reduced-motion:reduce){
+ .livro-animada.livro-parada .livro-janela{overflow-x:auto}
+ .livro-animada.livro-parada .livro-trilho{animation:none}
+}
+
+.livro-faixa{
+  --largura-par:min(720px,calc(100vw - 2rem));
+  --margem-faixa:max(1rem,calc((100vw - var(--largura-par))/2));
+}
+.livro-faixa .livro-janela{
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-padding-inline:var(--margem-faixa);
+  scrollbar-width:thin;
+  scrollbar-color:var(--accent) transparent;
+  padding-block:.75rem 1rem;
+}
+.livro-faixa .livro-grupo{padding-inline:var(--margem-faixa);gap:1.15rem}
+.livro-faixa .livro-par{
+  width:var(--largura-par);
+  scroll-snap-align:start;
+  grid-template-columns:minmax(0,.52fr) minmax(0,1fr);
+  align-items:center;
+  gap:clamp(.55rem,2.4vw,1.65rem);
+  padding:clamp(.45rem,1.5vw,1.1rem);
+  background:transparent;
+  border:0;
+}
+.livro-faixa .livro-post img{
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:clamp(170px,35vw,370px);
+  margin-inline:auto;
+  border-radius:5px;
+}
+.livro-faixa .livro-ficha:not(.livro-antes){
+  overflow:hidden;
+  border-radius:4px;
+  box-shadow:3px 4px 0 #e8e1cf,0 7px 19px #243a2c1c;
+}
+.livro-faixa .livro-ficha>img{
+  height:auto;
+  max-height:clamp(120px,27vw,225px);
+  object-fit:contain;
+  background:transparent;
+}
+.livro-faixa .livro-titulo{padding:.75rem .65rem .5rem}
+.livro-faixa .livro-titulo h3{font-size:clamp(1.35rem,3vw,2.3rem)}
+.livro-faixa .livro-ficha-texto{padding:.65rem .8rem .85rem;gap:.75rem}
+.livro-faixa .livro-ficha-texto p,.livro-faixa .livro-preparo{font-size:.875rem;line-height:1.45}
+.livro-faixa .livro-ficha-texto strong{font-size:1rem}
+@media(max-width:570px){
+  .livro-faixa .livro-par{grid-template-columns:minmax(0,.48fr) minmax(0,1fr);align-items:center}
+  .livro-faixa .livro-ficha-texto{grid-template-columns:minmax(0,1fr);padding:.55rem .65rem;gap:.15rem}
+  .livro-faixa .livro-preparo{border-left:0;border-top:1px solid var(--line);padding:.35rem 0 0}
+}
+
+/* Prévias editoriais pareadas, com a mesma moldura para o print e a ficha. */
+.livro-faixa{--card-largura:clamp(144px,22vw,245px);--card-altura:clamp(335px,42vw,478px);--card-gap:clamp(.5rem,1.25vw,1rem)}
+.livro-faixa .livro-janela{scroll-snap-type:none;scroll-padding:0}
+.livro-faixa .livro-grupo{padding:0 var(--card-gap) 0 0;gap:var(--card-gap)}
+.livro-faixa .livro-par{width:auto;grid-template-columns:repeat(2,var(--card-largura));gap:var(--card-gap);padding:0;align-items:stretch}
+.livro-faixa .livro-par .livro-ficha{height:var(--card-altura);box-sizing:border-box;border-radius:5px;overflow:hidden}
+.livro-faixa .livro-post{height:100%;display:grid;place-items:center;background:#141414}
+.livro-faixa .livro-post img{width:100%;height:100%;max-height:100%;object-fit:contain;border-radius:0}
+.livro-faixa .livro-ficha:not(.livro-antes){display:flex;flex-direction:column;background:#fcf8ef;box-shadow:0 4px 14px #243a2c1a}
+.livro-faixa .livro-titulo{text-align:left;padding:.65rem .65rem .4rem}
+.livro-faixa .livro-titulo .livro-assinatura{font-weight:800;font-size:.58rem;text-transform:uppercase;padding-bottom:.3rem;border-bottom:1px solid var(--line);margin-bottom:.4rem}
+.livro-faixa .livro-titulo h3{font-size:clamp(.98rem,1.65vw,1.52rem);line-height:1.06}
+.livro-faixa .livro-titulo .livro-rende{font-size:.65rem}
+.livro-faixa .livro-ficha>img{width:calc(100% - 1.3rem);height:auto;aspect-ratio:1.7;max-height:none;object-fit:cover;flex:none}
+.livro-faixa .livro-ficha-texto{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:.36rem;padding:.55rem .65rem;overflow:auto;line-height:1.32;font-size:clamp(.55rem,.84vw,.72rem)}
+.livro-faixa .livro-ficha-texto strong{font-size:clamp(.67rem,1.05vw,.92rem)}
+.livro-faixa .livro-preparo{border:0;border-left:1px solid var(--line);padding:0 0 0 .36rem;font-size:inherit;line-height:inherit}
+.livro-ingredientes ul{list-style:none;padding:0;margin:0}
+.livro-ingredientes li+li{margin-top:.2rem}
+.livro-faixa.livro-animada .livro-trilho{animation-duration:150s}
+
+.livro-faixa .livro-janela{scrollbar-width:none}
+.livro-faixa .livro-janela::-webkit-scrollbar{display:none}
+.livro-faixa.livro-animada .livro-janela:hover .livro-trilho,
+.livro-faixa.livro-animada .livro-janela:focus-within .livro-trilho{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+ .livro-faixa.livro-animada .livro-janela{overflow-x:auto}
+ .livro-faixa.livro-animada .livro-trilho{animation:none}
+}
+
+.oferta img{height:auto;aspect-ratio:auto;object-fit:contain;background:transparent;border-radius:0}
+
+.link-amostra{color:var(--leaf);font-size:.92rem;font-weight:750;text-underline-offset:.22em}
+.bonus h2{max-width:24ch}
+.bonus-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.8rem,3vw,1.5rem);margin-top:1.5rem}
+.bonus-grade article{background:var(--ivory);border-top:2px solid var(--accent);padding:1.1rem 1.2rem;border-radius:4px}
+.bonus-grade article p{margin-bottom:0}
+.faq-compra{margin-top:1.35rem}
+@media(max-width:750px){.bonus-grade{grid-template-columns:1fr}}
+
+.bonus-mockup{display:block;aspect-ratio:4/3;object-fit:contain;border-radius:4px;margin-bottom:.85rem;background:var(--paper)}
+.bonus .bonus-mockup{aspect-ratio:1/1.85;object-fit:contain;background:#f5ead8}
+.bonus-grade article{padding:.75rem .75rem 1rem}
+.bonus-grade h3,.bonus-grade p{margin-inline:.25rem}
+
+.bonus-personalizados .bonus-grade article{min-width:0;border:0;border-radius:0;padding:0;background:transparent}
+.bonus-personalizados .bonus-grade article>h3{margin:.9rem 0 .45rem}
+.bonus-personalizados .bonus-grade article>p{margin:0}
+.bonus-vitrine{display:grid;place-items:center;min-height:265px;aspect-ratio:1.17;padding:1rem;margin:0;border-radius:8px;background:#dae0ce}
+.bonus-vitrine-2{background:#ead9c5}
+.bonus-vitrine-3{background:#d9ddd5}
+.bonus-folha{position:relative;width:min(100%,265px);padding:.72rem;background:var(--ivory);box-shadow:0 12px 22px #27352527,3px 4px 0 #e6decd;transform:rotate(-2deg);border-radius:4px}
+.bonus-vitrine-2 .bonus-folha{transform:rotate(2deg)}
+.bonus-folha .bonus-rotulo{color:var(--muted);font-size:.71rem;font-weight:750;margin:0}
+.bonus-folha .bonus-preview-titulo{font:clamp(1.15rem,2.1vw,1.7rem)/1.05 var(--display);color:var(--leaf);margin:.25rem 0 .55rem}
+.bonus-folha>img{width:100%;aspect-ratio:2.35;object-fit:cover;border-radius:3px}
+.bonus-folha dl,.bonus-folha dd{margin:0;font-size:.7rem}
+.bonus-folha dl div{display:flex;justify-content:space-between;gap:.3rem;padding:.3rem 0;border-bottom:1px solid var(--line)}
+.bonus-folha dt{font-weight:700}
+.bonus-aba{color:var(--ivory);background:var(--leaf);padding:.32rem .48rem;margin-top:.4rem;border-radius:3px;font-size:.66rem;line-height:1.3}
+.bonus-medidas{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:.5rem}
+.bonus-medidas span{padding:.33rem .42rem;background:#eae9db;border-radius:3px;font-size:.66rem}
+.bonus-medidas strong{display:block;font-size:.87rem;color:var(--leaf)}
+.bonus-folha .bonus-exemplo{font-size:.72rem;margin:.45rem 0 0}
+.bonus-indice-item{display:grid;grid-template-columns:53px 1fr;align-items:center;gap:.5rem;padding:.36rem 0;border-top:1px solid var(--line);font-size:.72rem}
+.bonus-indice-item img{aspect-ratio:1.4;object-fit:cover;border-radius:3px}
+.bonus-indice-item strong{display:block;color:var(--leaf)}
+
+.bonus-freezer-pratos{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.bonus-freezer-pratos img{aspect-ratio:1.2;object-fit:cover;border-radius:3px;margin-bottom:.35rem}
+.bonus-freezer-pratos strong,.bonus-freezer-pratos span{display:block;font-size:.72rem;line-height:1.25}
+.bonus-freezer-pratos span{color:var(--muted);margin-top:.15rem}
+
+.bonus-personalizados .bonus-foto{margin:0;border-radius:6px;overflow:hidden;background:var(--paper)}
+.bonus-personalizados .bonus-foto img{display:block;width:100%;height:auto;object-fit:contain}
+
+.oferta-entrega{list-style:none;margin:1.1rem 0 0;padding:0}
+.oferta-entrega li{border-top:1px solid #e6e8d638;padding:.6rem 0}
+.oferta-entrega strong,.oferta-entrega span{display:block}
+.oferta-entrega strong{font-size:1.025rem;color:var(--ivory)}
+.oferta-entrega span{font-size:.88rem;line-height:1.45;color:#e8eadf}
+.oferta-compra{border-top:1px solid #e6e8d638;padding-top:.1rem}
+.oferta-compra .preco{margin:.7rem 0 .35rem}
+.oferta-compra .oferta-entrega-nota{font-size:.79rem;line-height:1.45;margin:.6rem 0 0;max-width:45ch}
+
+.oferta.oferta-clara{background:#f0efe5;color:var(--ink)}
+.oferta-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(1.4rem,6vw,5rem);align-items:center;max-width:1060px}
+.oferta-apresentacao h2{max-width:15ch;font-size:clamp(2.15rem,4vw,3.45rem)}
+.oferta-clara .oferta-apresentacao p{color:var(--muted);max-width:37ch}
+.oferta-clara .oferta-apresentacao img{max-width:440px;margin-top:1.35rem}
+.oferta-card{background:#fffdf6;color:var(--ink);border:1px solid #deded0;border-radius:14px;padding:clamp(1.15rem,3vw,2.15rem);box-shadow:0 15px 36px #243a2c21}
+.oferta-clara .oferta-card p{color:var(--muted)}
+.oferta-card .oferta-pacote{font-size:.87rem;font-weight:750;margin:0 0 .45rem}
+.oferta-clara .oferta-card .preco{color:var(--leaf);font-size:clamp(4.15rem,8vw,6.05rem);margin:0 0 .45rem}
+.oferta-card .preco span{display:inline-block;vertical-align:top;font-size:.34em;margin-top:.28em}
+.oferta-card .pagamento{font-size:.9rem;margin:0}
+.oferta-card .oferta-entrega{margin:1.15rem 0}
+.oferta-card .oferta-entrega li{display:flex;align-items:baseline;gap:.65rem;border-top:0;padding:.35rem 0;font-size:.94rem}
+.oferta-card .oferta-entrega li::before{content:"✓";color:#5a7040;font-weight:800}
+.oferta-card .oferta-entrega strong{color:var(--ink);font-size:inherit}
+.oferta-clara .oferta-card .botao{width:100%;max-width:none;background:var(--leaf);color:white;border-radius:7px}
+.oferta-clara .oferta-card .botao:hover{background:#3b533e}
+.oferta-card .oferta-entrega-nota{padding-top:.8rem;border-top:1px solid var(--line);margin:.85rem 0 0;font-size:.8rem;line-height:1.42}
+@media(max-width:750px){.oferta-layout{grid-template-columns:1fr}.oferta-apresentacao h2{max-width:19ch}}
+
+.compra-mobile{display:none}
+@media(max-width:750px){
+  html{scroll-padding-top:.75rem}
+  .container{width:calc(100% - 2rem)}
+  .abertura{padding:1.45rem 0 2.15rem}
+  .grade-abertura{gap:1.05rem}
+  .chamada h1{max-width:16ch;font-size:clamp(2.05rem,8.5vw,3.45rem);line-height:1.03;margin-bottom:.8rem}
+  .chamada p{font-size:1rem;line-height:1.48;margin-bottom:.95rem}
+  .produto.campanha{width:min(100%,520px);margin-inline:auto}
+  .secao{padding-block:2.55rem}
+  .secao h2{font-size:clamp(1.8rem,7vw,2.65rem);line-height:1.08}
+  .livro-faixa{margin-top:1rem;--card-largura:clamp(135px,42vw,220px);--card-altura:clamp(360px,96vw,440px)}
+  .livro-faixa .livro-ficha-texto{grid-template-columns:minmax(0,1fr);font-size:.72rem;gap:.35rem}
+  .livro-faixa .livro-preparo{border-left:0;border-top:1px solid var(--line);padding:.35rem 0 0}
+  .livro-faixa .livro-ficha-texto strong{font-size:.78rem}
+  .passos{gap:.85rem}
+  .passos li{display:grid;grid-template-columns:minmax(85px,.85fr) minmax(0,1.15fr);column-gap:.85rem;align-items:start}
+  .passos li::before{grid-column:2;margin:0 0 .26rem;line-height:1}
+  .passos li img{grid-area:1/1/4/2;margin:0;aspect-ratio:1.16}
+  .passos li h3{grid-column:2;font-size:clamp(1.12rem,4.8vw,1.45rem);margin:0 0 .32rem}
+  .passos li p{grid-column:2;font-size:.87rem;line-height:1.45}
+  .bonus-personalizados .bonus-grade article{display:grid;grid-template-columns:minmax(92px,.85fr) minmax(0,1.15fr);gap:.35rem .9rem;align-content:start;border-top:1px solid var(--line);padding-top:.85rem}
+  .bonus-personalizados .bonus-foto{grid-area:1/1/3/2;align-self:start}
+  .bonus-personalizados .bonus-grade article>h3{grid-column:2;margin:0;font-size:clamp(1.13rem,4.7vw,1.5rem)}
+  .bonus-personalizados .bonus-grade article>p{grid-column:2;font-size:.88rem;line-height:1.45}
+  .oferta-layout{gap:1rem}
+  .oferta-apresentacao{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:.55rem .75rem;align-items:center}
+  .oferta-apresentacao h2{grid-column:1/-1;margin-bottom:0}
+  .oferta-clara .oferta-apresentacao p{font-size:.91rem;line-height:1.45;margin:0}
+  .oferta-clara .oferta-apresentacao img{margin:0}
+  .oferta-card{padding:1.1rem}
+  .oferta-clara .oferta-card .preco{font-size:4.45rem}
+  .oferta-card .oferta-entrega{margin:.85rem 0}
+  .faq summary{min-height:44px;padding:.48rem 0}
+  footer{padding-bottom:calc(5rem + env(safe-area-inset-bottom,0px))}
+  .compra-mobile:not([hidden]){display:flex;position:fixed;z-index:5;left:0;right:0;bottom:0;align-items:center;justify-content:space-between;gap:.7rem;padding:.5rem 1rem calc(.5rem + env(safe-area-inset-bottom,0px));background:var(--ivory);border-top:1px solid var(--line);box-shadow:0 -4px 15px #243a2c15}
+  .compra-mobile>span{white-space:nowrap;color:var(--leaf);font-weight:800}
+  .compra-mobile .botao{min-height:44px;padding:.62rem .95rem;font-size:.91rem}
+}
+
+.livro-faixa.livro-fora-da-tela .livro-trilho{animation-play-state:paused}
+</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -15,7 +403,7 @@
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
+t.fetchPriority="low";t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1684457396707952');
@@ -37,7 +425,7 @@ src="https://www.facebook.com/tr?id=1684457396707952&amp;ev=PageView&amp;noscrip
         <a class="botao" href="#oferta">Quero meu livro por R$ 37</a>
       </div>
       <figure class="produto campanha">
-<img src="mockup-campanha.webp" srcset="mockup-campanha-560.webp 560w, mockup-campanha-760.webp 760w, mockup-campanha.webp 1320w" sizes="(max-width: 552px) calc(100vw - 32px), (max-width: 750px) 520px, (max-width: 1228px) 52vw, 620px" alt="Mockup ilustrativo de Dos Salvos para a Mesa: focaccia, risoto e pudim aparecem tanto nas telas dos Salvos quanto nas respectivas páginas do livro" width="1320" height="805" fetchpriority="high">
+<img src="mockup-campanha.webp" srcset="abertura-480.webp 480w, abertura-680.webp 680w, mockup-campanha-760.webp 760w, mockup-campanha.webp 1320w" sizes="(max-width: 552px) calc(100vw - 32px), (max-width: 750px) 520px, (max-width: 1228px) 52vw, 620px" alt="Mockup ilustrativo de Dos Salvos para a Mesa: focaccia, risoto e pudim aparecem tanto nas telas dos Salvos quanto nas respectivas páginas do livro" width="1320" height="805" fetchpriority="high">
 </figure>
     </div>
   </section>
